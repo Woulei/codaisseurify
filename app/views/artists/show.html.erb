@@ -1,0 +1,33 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @artist.name %></div>
+
+  <div class="panel-body">
+    <p><%= @artist.describtion %></p>
+  </div>
+</div>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Songs</div>
+
+  <div class="panel panel-primary">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Name:</th>
+          <th>Album:</th>
+          <th>Release Date:</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @artist.songs.each do |song| %>
+          <tr>
+            <th><%= song.name %></th>
+            <th><%= song.album %></th>
+            <th><%= song.release_date %></th>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
+<%= link_to "All Artists", artists_url, class: "btn btn-default" %>

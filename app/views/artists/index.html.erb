@@ -9,10 +9,11 @@
     <tbody>
       <% @artists.each do |artist| %>
         <tr>
-          <th><%= artist.name %></th>
+          <th><%= link_to artist.name, artist %></th>
           <th><%= artist.country.capitalize %></th>
         </tr>
       <% end %>
     </tbody>
   </table>
 </div>
+<%= link_to "New Artist", new_artist_url, class: "btn btn-default" %>
