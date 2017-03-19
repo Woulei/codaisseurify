@@ -16,6 +16,7 @@
           <th>Name:</th>
           <th>Album:</th>
           <th>Release Date:</th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +25,7 @@
             <th><%= song.name %></th>
             <th><%= song.album %></th>
             <th><%= song.release_date %></th>
+            <th><%= link_to "See Song", artist_song_url(@artist.id, song.id) %>
           </tr>
         <% end %>
       </tbody>

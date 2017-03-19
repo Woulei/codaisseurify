@@ -1,0 +1,12 @@
+<div class="panel panel-primary">
+  <div class="panel-heading"><%= @song.name %></div>
+
+  <div class="panel-body">
+    <p><strong>Artist: </strong><%= @song.artist.name %>
+    <p><strong>Album: </strong><%= @song.album %></p>
+    <p><strong>Release Date: </strong><%= @song.release_date %></p>
+  </div>
+</div>
+<%= link_to "Back to Artist", artist_url(@song.artist), class: "btn btn-default" %>
+<%= link_to "Edit Song", edit_artist_song_url(@song.artist, @song), class: "btn btn-default" %>
+<%= link_to "Delete Song", artist_song_url(@song.artist, @song), data: { confirm: "Are you sure?" },method: :delete, class: "btn btn-default" %>
