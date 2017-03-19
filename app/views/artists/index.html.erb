@@ -12,6 +12,9 @@
           <th><%= link_to artist.name, artist %></th>
           <th><%= artist.country.capitalize %></th>
         </tr>
+        <tr>
+          <th><%= image_tag artist.photos.first.image.thumbnail %></th>
+        </tr>
       <% end %>
     </tbody>
   </table>
