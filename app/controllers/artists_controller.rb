@@ -1,11 +1,11 @@
 class ArtistsController < ApplicationController
+  before_action :set_artist, only: [:show, :edit, :update]
 
   def index
     @artists = Artist.all
   end
 
   def show
-    @artist = Artist.find(params[:id])
     @photos = @artist.photos
   end
 
@@ -28,19 +28,18 @@ class ArtistsController < ApplicationController
   end
 
   def edit
-    @artist = Artist.find(params[:id])
+    @photos = @artist.photos
   end
 
   def update
-    @artist = Artist.find(params[:id])
-    if @artist.update_attributes(artist_params)
+    if @artist.update(artist_params)
       image_params.each do |image|
         @artist.photos.create(image: image)
       end
 
       redirect_to @artist
     else
-      render 'edit'
+      render :edit
     end
   end
 
@@ -51,8 +50,11 @@ class ArtistsController < ApplicationController
   end
 
   private
+    def set_artist
+      @artist = Artist.find(params[:id])
+    end
     def image_params
-      params[:image].present? ? params.require(:images) : []
+      params[:images].present? ? params.require(:images) : []
     end
     def artist_params
       params.require(:artist).permit(:name, :describtion, :country)
