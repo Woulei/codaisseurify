@@ -1,0 +1,18 @@
+<div class="table-responsive">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name:</th>
+        <th>Country:</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @artists.each do |artist| %>
+        <tr>
+          <th><%= artist.name %></th>
+          <th><%= artist.country.capitalize %></th>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
