@@ -33,3 +33,4 @@
 <%= link_to "All Artists", artists_url, class: "btn btn-default" %>
 <%= link_to "Add new Song",  new_artist_song_url(@artist.id), class: "btn btn-default" %>
 <%= link_to "Edit Artist", edit_artist_url(@artist.id), class: "btn btn-default" %>
+<%= link_to "Delete Artist", artist_url(@artist.id), method: :delete, data: { confirm: "Are you sure? \n All songs will be deleted too." }, class: "btn btn-default" %>
