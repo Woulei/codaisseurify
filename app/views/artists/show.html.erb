@@ -31,8 +31,8 @@
             <th><%= song.name %></th>
             <th><%= song.album %></th>
             <th><%= song.release_date %></th>
-            <th><%= link_to "See Song", artist_song_url(@artist.id, song.id) %></th>
             <th><%= link_to "Edit Song", edit_artist_song_url(@artist.id, song.id) %></th>
+            <th><%= link_to "Delete Song", artist_song_url(@artist.id, song.id), method: :delete, data: { confirm: "Are you sure?" }%></th>
           </tr>
         <% end %>
       </tbody>
