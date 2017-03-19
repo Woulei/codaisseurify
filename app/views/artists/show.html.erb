@@ -17,6 +17,7 @@
           <th>Album:</th>
           <th>Release Date:</th>
           <th></th>
+          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -25,13 +26,15 @@
             <th><%= song.name %></th>
             <th><%= song.album %></th>
             <th><%= song.release_date %></th>
-            <th><%= link_to "See Song", artist_song_url(@artist.id, song.id) %>
+            <th><%= link_to "See Song", artist_song_url(@artist.id, song.id) %></th>
+            <th><%= link_to "Edit Song", edit_artist_song_url(@artist.id, song.id) %></th>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
 </div>
+
 <%= link_to "All Artists", artists_url, class: "btn btn-default" %>
 <%= link_to "Add new Song",  new_artist_song_url(@artist.id), class: "btn btn-default" %>
 <%= link_to "Edit Artist", edit_artist_url(@artist.id), class: "btn btn-default" %>
