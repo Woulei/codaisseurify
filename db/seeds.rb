@@ -1,4 +1,5 @@
 # Delete all the records
+Photo.delete_all
 Song.delete_all
 Artist.delete_all
 puts "All records deleted.."
@@ -14,3 +15,10 @@ Song.create!(name: "Ten Feet Tall", album: "Forget the World", release_date: Dat
 Song.create!(name: "The Spark", album: "Forget the World", release_date: Date.parse("11/10/2013"), artist: afrojack)
 Song.create!(name: "Hey Brother", album: "True", release_date: Date.parse("28/10/2013"), artist: avicii)
 Song.create!(name: "Scared to Be Lonely", album: "Scared to Be Lonely", release_date: Date.parse("27/01/2017"), artist: garrix)
+puts "Song created and linked to the artists"
+
+# Add photos to the artists
+Photo.create!(artist: afrojack, remote_image_url: "http://res.cloudinary.com/dc1hpp0im/image/upload/v1489933228/afrojack_gt4bww.jpg")
+Photo.create!(artist: avicii, remote_image_url: "http://res.cloudinary.com/dc1hpp0im/image/upload/v1489933224/avicii_bgfdxi.jpg")
+Photo.create!(artist: garrix, remote_image_url: "http://res.cloudinary.com/dc1hpp0im/image/upload/v1489933221/garrixx_d2mhbk.jpg")
+puts "Photo's added to the artists"

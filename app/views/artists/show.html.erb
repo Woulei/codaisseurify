@@ -3,6 +3,11 @@
 
   <div class="panel-body">
     <p><%= @artist.describtion %></p>
+    <p>
+      <% @artist.photos.each do |photo| %>
+        <%= image_tag photo.image %>
+      <% end %>
+    </p>
   </div>
 </div>
 

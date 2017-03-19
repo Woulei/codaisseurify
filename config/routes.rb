@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   resources :artists do
     resources :songs
   end
-  #post '/artists/:id/songs/new' => 'songs#create', as: :create_artist_song
+  resources :photos
 end
