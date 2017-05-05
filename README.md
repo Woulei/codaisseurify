@@ -8,6 +8,10 @@ Codaisseurify was a homework assignment during the Codaisseur Academy. There wer
 
 __NOTE:__ This was build during the Academy. If I would build it again, I would do it differently. Also the finishing touches were skipped due to the small amount of time available. 
 
+[![](https://github.com/Woulei/codaisseurify/blob/master/app/assets/images/screenshots/Screen%20Shot%202017-05-05%20at%2010.50.41.png?raw=true)](https://github.com/Woulei/codaisseurify/blob/master/app/assets/images/screenshots/Screen%20Shot%202017-05-05%20at%2010.50.41.png?raw=true)
+
+[![](https://github.com/Woulei/codaisseurify/blob/master/app/assets/images/screenshots/Screen%20Shot%202017-05-05%20at%2010.51.10.png?raw=true)](https://github.com/Woulei/codaisseurify/blob/master/app/assets/images/screenshots/Screen%20Shot%202017-05-05%20at%2010.51.10.png?raw=true)
+
 ## Database Structure
   * Artists
     * name:string
